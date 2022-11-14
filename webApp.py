@@ -1,7 +1,6 @@
 import streamlit
 import pandas as pd
 import joblib
-import sklearn
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
