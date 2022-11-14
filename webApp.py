@@ -1,5 +1,4 @@
 import streamlit
-import scikit-learn
 import pandas as pd
 import joblib
 import numpy as np
