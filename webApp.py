@@ -1,15 +1,15 @@
-import streamlit as st
+import streamlit
 import pandas as pd
 import joblib
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
-st.header("Proyecto final Predicción usando Arbol de Clasificación")
-st.text("Desarrollado por: Juan Hernández Charrazquiel")
-st.text("Sincelejo - Sucre")
+header("Proyecto final Predicción usando Arbol de Clasificación")
+text("Desarrollado por: Juan Hernández Charrazquiel")
+text("Sincelejo - Sucre")
 
 
-product = st.selectbox("Elija un producto del stock",
+product = selectbox("Elija un producto del stock",
 ('Salchicha', 'Mermelada', 'Chorizo', 'Sardinas', 'Sal', 'Arroz', 'Atún', 'Cereal', 'Papa', 'Avena', 'Margarina', 'Queso', 'Jamón', 'Yogur',
  'Tocino', 'Gelatina', 'Frijoles', 'Harina', 'Pasta', 'Café', 'Mantequilla', 'Leche entera', 'Vinagre', 'Miel', 'Vino', 'Mortadela', 'Huevo',
  'Salsa de tomate', 'Aceitunas', 'Mayonesa', 'Azúcar', 'Cacahuate'))
@@ -80,16 +80,16 @@ if (product == 'Azúcar'):
 if (product == 'Cacahuate'):
     product = 31
 
-unit_price = st.number_input("Digite el precio unitario del producto")
+unit_price = number_input("Digite el precio unitario del producto")
 
-quantity = st.number_input("Ingrese la cantidad del producto a vender")
+quantity = number_input("Ingrese la cantidad del producto a vender")
 
 total = unit_price*quantity
 
 
 
 
-if st.button("Submit"):
+if button("Submit"):
     
     model = joblib.load("model.pkl")
 
@@ -104,5 +104,5 @@ if st.button("Submit"):
     elif prediction[0] == 2:
         resultado = "Normal"
        
-    st.text(f"Usted debe comprar : {resultado}")
+    text(f"Usted debe comprar : {resultado}")
 
