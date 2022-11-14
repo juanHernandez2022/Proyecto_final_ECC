@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 
 st.header("Proyecto final Predicción usando Arbol de Clasificación")
-st.text("Desarrollado por: Juan Hernández Charrazquiel")
+st.text("Desarrollado por: Juan Hernández Charrasquiel")
 st.text("Sincelejo - Sucre")
 
 
